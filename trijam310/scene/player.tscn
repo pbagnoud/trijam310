@@ -19,3 +19,7 @@ texture = ExtResource("1_2yrg5")
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
 position = Vector2(134, 117)
 shape = SubResource("CapsuleShape2D_dxf84")
+
+[node name="Malade" type="Timer" parent="."]
+
+[connection signal="timeout" from="Malade" to="." method="_on_malade_timeout"]
