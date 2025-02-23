@@ -13,4 +13,7 @@ texture = ExtResource("1_nebjo")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(-4, -27, -1, -16, 9, -12, 24, -4, 27, 13, 24, 28, -11, 31, -24, 24, -26, 2, -16, -11, -10, -19, -6, -31, -4, -28)
 
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]
