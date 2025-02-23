@@ -1,5 +1,8 @@
 extends CharacterBody2D
 
+signal food
+signal hit
+
 @export var speed = 400 # How fast the player will move (pixels/sec).
 var screen_size # Size of the game window.
 
@@ -25,5 +28,7 @@ func _physics_process(delta: float) -> void:
 		#$AnimatedSprite2D.play()
 	#else:
 		#$AnimatedSprite2D.stop()
-	move_and_collide(velocity * delta)
+	var collision = move_and_collide(velocity * delta)
+	if collision:
+		pass
 	#position = position.clamp(Vector2.ZERO, screen_size)
