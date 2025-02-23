@@ -1,19 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://da2nanq4k7m4l"]
+[gd_scene load_steps=4 format=3 uid="uid://hh7wbs8c81vq"]
 
 [ext_resource type="Texture2D" uid="uid://rbcf6vp186sy" path="res://asset/blood.png" id="1_u40k6"]
 [ext_resource type="Script" path="res://script/food.gd" id="1_xhkmg"]
 
-[node name="Food" type="CharacterBody2D"]
-collision_mask = 4
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6g5b0"]
+radius = 27.0
+height = 64.0
+
+[node name="Food" type="Area2D"]
+collision_layer = 7
+collision_mask = 7
 script = ExtResource("1_xhkmg")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_u40k6")
 
-[node name="Area2D" type="Area2D" parent="."]
-collision_mask = 4
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_6g5b0")
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, -28, 22, -1, 23, 16, 12, 28, -9, 29, -17, 26, -25, 15, -25, -1, -15, -13)
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_player_collision"]
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

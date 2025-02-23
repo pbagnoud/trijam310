@@ -28,7 +28,6 @@ func _physics_process(delta: float) -> void:
 		#$AnimatedSprite2D.play()
 	#else:
 		#$AnimatedSprite2D.stop()
-	var collision = move_and_collide(velocity * delta)
-	if collision:
-		pass
+	move_and_collide(velocity * delta)
+	#
 	#position = position.clamp(Vector2.ZERO, screen_size)
