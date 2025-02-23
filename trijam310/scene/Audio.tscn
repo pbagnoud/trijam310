@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://bpmwgivyqwxd3"]
+
+[ext_resource type="Script" path="res://script/audio.gd" id="1_a4br3"]
+[ext_resource type="AudioStream" uid="uid://bemox0hgkikna" path="res://asset/music.mp3" id="2_2e2p0"]
+
+[node name="AudioControl" type="Node2D"]
+script = ExtResource("1_a4br3")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_2e2p0")
+volume_db = -16.545
+attenuation = 0.965936
