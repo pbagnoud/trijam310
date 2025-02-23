@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://hgqfonbl0v7u"]
 
-[ext_resource type="Texture2D" uid="uid://c7m8axq5cfqq1" path="res://asset/vampire.png" id="1_2yrg5"]
+[ext_resource type="Texture2D" uid="uid://c7m8axq5cfqq1" path="res://asset/Vampire.png" id="1_2yrg5"]
 [ext_resource type="Script" path="res://script/player.gd" id="1_t63xv"]
 [ext_resource type="Texture2D" uid="uid://dvw2stlatlaim" path="res://asset/vampire_malade.png" id="3_s3udh"]
 
