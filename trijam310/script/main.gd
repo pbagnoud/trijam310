@@ -35,4 +35,5 @@ func _on_spawn_garlic_timer_timeout() -> void:
 	garlic.position = random_position
 	add_child(garlic)
 	garlic.hit.connect(player._on_hit)
+	spawn_garlic_timer.wait_time *=.9
 	spawn_garlic_timer.start()
