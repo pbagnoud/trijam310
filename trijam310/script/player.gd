@@ -31,3 +31,15 @@ func _physics_process(delta: float) -> void:
 	move_and_collide(velocity * delta)
 	#
 	#position = position.clamp(Vector2.ZERO, screen_size)
+
+func on_hit():
+	# lancer timer
+	# changer la vitesse
+	# changer couleur
+	pass
+	
+
+func _on_malade_timeout() -> void:
+	# reset la vitesse
+	# reset la couleur
+	pass # Replace with function body.
