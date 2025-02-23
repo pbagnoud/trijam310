@@ -1,6 +1,26 @@
-[gd_scene load_steps=2 format=3 uid="uid://xwccf6f1x2fd"]
+[gd_scene load_steps=7 format=3 uid="uid://xwccf6f1x2fd"]
 
 [ext_resource type="Script" path="res://script/main.gd" id="1_rybf0"]
+[ext_resource type="PackedScene" uid="uid://cqi4cdpngbrqo" path="res://scene/arena.tscn" id="2_io2pg"]
+[ext_resource type="PackedScene" uid="uid://hgqfonbl0v7u" path="res://scene/player.tscn" id="3_kgqnp"]
+[ext_resource type="PackedScene" uid="uid://cxqdkl5h67ti0" path="res://scene/ennemi.tscn" id="4_nysn2"]
+[ext_resource type="PackedScene" uid="uid://da2nanq4k7m4l" path="res://scene/food.tscn" id="5_uxa5d"]
+[ext_resource type="PackedScene" uid="uid://b0g6kp1sqn57k" path="res://scene/pv.tscn" id="6_qpyw0"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_rybf0")
+
+[node name="Arena" parent="." instance=ExtResource("2_io2pg")]
+
+[node name="Player" parent="." instance=ExtResource("3_kgqnp")]
+position = Vector2(354, 108)
+
+[node name="Ennemi" parent="." instance=ExtResource("4_nysn2")]
+modulate = Color(100, 1, 1, 1)
+position = Vector2(668, 126)
+
+[node name="Food" parent="." instance=ExtResource("5_uxa5d")]
+modulate = Color(1, 93.513, 1, 1)
+position = Vector2(177, 281)
+
+[node name="PV" parent="." instance=ExtResource("6_qpyw0")]
