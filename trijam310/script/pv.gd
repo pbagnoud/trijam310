@@ -4,7 +4,7 @@ extends ProgressBar
 @onready var timer: Timer = $Timer
 @onready var color_rect: ColorRect = $ColorRect
 @onready var score_timer: Timer = $Score/ScoreTimer
-
+ 
 
 const DYING_SPEED = 15
 var REGEN = self.max_value/2
@@ -12,6 +12,7 @@ var REGEN = self.max_value/2
 
 var current_score:float
 var in_game_over = 0
+var time_elapsed := 0.0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,7 +30,7 @@ func _physics_process(delta: float) -> void:
 		game_over.visible = 1
 		in_game_over = 1
 		timer.start()
-		score_timer.pause()
+		score_timer.paused = 1
 		game_over.text = "Score = " + str(score_timer)
 		
 

@@ -14,7 +14,7 @@ script = ExtResource("1_5k55b")
 [node name="GameOver" type="Label" parent="."]
 visible = false
 z_index = 10
-texture_filter = 1
+texture_filter = 2
 layout_mode = 0
 offset_left = 82.0
 offset_top = -297.0
