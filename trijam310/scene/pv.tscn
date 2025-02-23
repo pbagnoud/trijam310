@@ -25,17 +25,17 @@ text = "Game Over"
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="ColorRect" type="ColorRect" parent="GameOver"]
-visible = false
-layout_mode = 0
-offset_left = -26.0
-offset_top = -37.0
-offset_right = 149.0
-offset_bottom = 63.0
-color = Color(0, 0, 0, 1)
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 3.0
 one_shot = true
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = -87.0
+offset_top = -537.0
+offset_right = 1068.0
+offset_bottom = 116.0
+color = Color(0, 0, 0, 1)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
