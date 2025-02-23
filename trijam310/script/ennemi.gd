@@ -17,7 +17,8 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	print("OUILLE")
-	hit.emit()
+	if body.is_in_group('Player'):
+		hit.emit()
 	queue_free()
 
 
