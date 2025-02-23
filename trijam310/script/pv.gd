@@ -7,6 +7,8 @@ extends ProgressBar
 
 const DYING_SPEED = 15
 var REGEN = self.max_value/2
+
+
 var current_score:float
 var in_game_over = 0
 
