@@ -10,3 +10,18 @@ offset_right = 1049.0
 offset_bottom = 609.0
 show_percentage = false
 script = ExtResource("1_5k55b")
+
+[node name="GameOver" type="Label" parent="."]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_left = 337.0
+offset_top = -215.0
+offset_right = 424.0
+offset_bottom = -192.0
+text = "Game Over"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
