@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://cqi4cdpngbrqo"]
+[gd_scene load_steps=5 format=3 uid="uid://cqi4cdpngbrqo"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_vy5dm"]
 normal = Vector2(1, 0)
@@ -7,6 +7,12 @@ distance = -4.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_jj0y2"]
 normal = Vector2(-1, 0)
 distance = -1151.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7j6df"]
+distance = -649.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_4jyvk"]
+normal = Vector2(0, 1)
 
 [node name="Arena" type="StaticBody2D"]
 
@@ -17,3 +23,9 @@ shape = SubResource("WorldBoundaryShape2D_vy5dm")
 [node name="RightWall" type="CollisionShape2D" parent="."]
 position = Vector2(3, -90)
 shape = SubResource("WorldBoundaryShape2D_jj0y2")
+
+[node name="DownWall" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_7j6df")
+
+[node name="UpWall" type="CollisionShape2D" parent="."]
+shape = SubResource("WorldBoundaryShape2D_4jyvk")
