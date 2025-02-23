@@ -1,8 +1,11 @@
 [gd_scene load_steps=2 format=3 uid="uid://da2nanq4k7m4l"]
 
-[ext_resource type="Texture2D" uid="uid://by50rr17l74kq" path="res://asset/icon.svg" id="1_5lv3w"]
+[ext_resource type="Texture2D" uid="uid://rbcf6vp186sy" path="res://asset/blood.png" id="1_u40k6"]
 
 [node name="Food" type="CharacterBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_5lv3w")
+texture = ExtResource("1_u40k6")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -28, 22, -1, 23, 16, 12, 28, -9, 29, -17, 26, -25, 15, -25, -1, -15, -13)
