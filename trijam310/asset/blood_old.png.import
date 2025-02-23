@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7m8axq5cfqq1"
-path="res://.godot/imported/vampire.png-73af9fdbf45788257f458001eeacc583.ctex"
+uid="uid://cx7d547jndemr"
+path="res://.godot/imported/blood_old.png-93cb31e804ce715035ac05bded48727c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/vampire.png"
-dest_files=["res://.godot/imported/vampire.png-73af9fdbf45788257f458001eeacc583.ctex"]
+source_file="res://asset/blood_old.png"
+dest_files=["res://.godot/imported/blood_old.png-93cb31e804ce715035ac05bded48727c.ctex"]
 
 [params]
 

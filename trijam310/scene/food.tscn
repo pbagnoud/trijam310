@@ -1,7 +1,22 @@
-[gd_scene load_steps=4 format=3 uid="uid://da2nanq4k7m4l"]
+[gd_scene load_steps=6 format=3 uid="uid://hh7wbs8c81vq"]
 
 [ext_resource type="Texture2D" uid="uid://rbcf6vp186sy" path="res://asset/blood.png" id="1_u40k6"]
 [ext_resource type="Script" path="res://script/food.gd" id="1_xhkmg"]
+[ext_resource type="Texture2D" uid="uid://cx7d547jndemr" path="res://asset/blood_old.png" id="3_dpr8s"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ias6q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_u40k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dpr8s")
+}],
+"loop": true,
+"name": &"get_old",
+"speed": 5.0
+}]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_6g5b0"]
 radius = 27.0
@@ -12,8 +27,9 @@ collision_layer = 7
 collision_mask = 7
 script = ExtResource("1_xhkmg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_u40k6")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ias6q")
+animation = &"get_old"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_6g5b0")
@@ -21,5 +37,10 @@ shape = SubResource("CapsuleShape2D_6g5b0")
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 polygon = PackedVector2Array(0, -28, 22, -1, 23, 16, 12, 28, -9, 29, -17, 26, -25, 15, -25, -1, -15, -13)
 
+[node name="Uptime" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Uptime" to="." method="_on_uptime_timeout"]
