@@ -1,15 +1,13 @@
 extends Node2D
 @onready var spawn_food_timer: Timer = $Spawn_food_timer
 @onready var pv: ProgressBar = $PV
-@onready var player: CharacterBody2D = $Player
-@onready var spawn_garlic_timer: Timer = $Spawn_garlic_timer
+
 @onready var spawn_area: ColorRect = $spawn_area
 var food_scene = preload("res://scene/food.tscn")
-var garlic_scene = preload("res://scene/ennemi.tscn")
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	Audio.play_music()
+	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -42,3 +40,4 @@ func _on_spawn_garlic_timer_timeout() -> void:
 	elif spawn_garlic_timer.wait_time > .1:
 		spawn_garlic_timer.wait_time *=.999
 	spawn_garlic_timer.start()
+
