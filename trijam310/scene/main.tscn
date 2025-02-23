@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://xwccf6f1x2fd"]
 
 [ext_resource type="Script" path="res://script/main.gd" id="1_rybf0"]
-[ext_resource type="PackedScene" uid="uid://cqi4cdpngbrqo" path="res://scene/arena.tscn" id="2_io2pg"]
+[ext_resource type="PackedScene" uid="uid://crlax0kinpwip" path="res://scene/arena.tscn" id="2_io2pg"]
 [ext_resource type="PackedScene" uid="uid://hgqfonbl0v7u" path="res://scene/player.tscn" id="3_kgqnp"]
-[ext_resource type="PackedScene" uid="uid://cxqdkl5h67ti0" path="res://scene/ennemi.tscn" id="4_nysn2"]
-[ext_resource type="PackedScene" uid="uid://da2nanq4k7m4l" path="res://scene/food.tscn" id="5_uxa5d"]
-[ext_resource type="PackedScene" uid="uid://b0g6kp1sqn57k" path="res://scene/pv.tscn" id="6_qpyw0"]
+[ext_resource type="PackedScene" uid="uid://dv1k4ufrimfnu" path="res://scene/ennemi.tscn" id="4_nysn2"]
+[ext_resource type="PackedScene" uid="uid://hh7wbs8c81vq" path="res://scene/food.tscn" id="5_uxa5d"]
+[ext_resource type="PackedScene" path="res://scene/pv.tscn" id="6_qpyw0"]
 [ext_resource type="PackedScene" path="res://scene/Audio.tscn" id="7_4kq7v"]
 
 [node name="main" type="Node2D"]
