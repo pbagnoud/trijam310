@@ -1,11 +1,14 @@
 extends Node2D
 @onready var spawn_food_timer: Timer = $Spawn_food_timer
 @onready var pv: ProgressBar = $PV
-@onready var spawn_area: ColorRect = $spawn_area
-@onready var audio_control: Node2D = $AudioControl
 
+@onready var spawn_garlic_timer: Timer = $Spawn_garlic_timer
+@onready var spawn_area: ColorRect = $spawn_area
+@onready var player: CharacterBody2D = $Player
 
 var food_scene = preload("res://scene/food.tscn")
+var garlic_scene = preload("res://scene/ennemi.tscn")
+
 var rng = RandomNumberGenerator.new()
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
