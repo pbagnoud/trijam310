@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c7m8axq5cfqq1" path="res://asset/Vampire.png" id="1_2yrg5"]
 [ext_resource type="Script" path="res://script/player.gd" id="1_t63xv"]
-[ext_resource type="Texture2D" uid="uid://clak24u6nr3hi" path="res://asset/Ail.png" id="3_6h0tu"]
+[ext_resource type="Texture2D" uid="uid://dvw2stlatlaim" path="res://asset/vampire_malade.png" id="3_s3udh"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_05ik6"]
 animations = [{
@@ -11,7 +11,7 @@ animations = [{
 "texture": ExtResource("1_2yrg5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_6h0tu")
+"texture": ExtResource("3_s3udh")
 }],
 "loop": true,
 "name": &"Color",

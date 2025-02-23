@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c7m8axq5cfqq1"
-path="res://.godot/imported/vampire.png-73af9fdbf45788257f458001eeacc583.ctex"
+uid="uid://dvw2stlatlaim"
+path="res://.godot/imported/vampire_malade.png-a4e688137efd6b053f27a2e0e48cc6dd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/vampire.png"
-dest_files=["res://.godot/imported/vampire.png-73af9fdbf45788257f458001eeacc583.ctex"]
+source_file="res://asset/vampire_malade.png"
+dest_files=["res://.godot/imported/vampire_malade.png-a4e688137efd6b053f27a2e0e48cc6dd.ctex"]
 
 [params]
 
