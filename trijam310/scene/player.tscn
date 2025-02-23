@@ -1,8 +1,20 @@
-[gd_scene load_steps=2 format=3 uid="uid://hgqfonbl0v7u"]
+[gd_scene load_steps=4 format=3 uid="uid://hgqfonbl0v7u"]
 
-[ext_resource type="Texture2D" uid="uid://by50rr17l74kq" path="res://asset/icon.svg" id="1_ntg0u"]
+[ext_resource type="Texture2D" uid="uid://c7m8axq5cfqq1" path="res://asset/Vampire.png" id="1_2yrg5"]
+[ext_resource type="Script" path="res://script/player.gd" id="1_t63xv"]
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dxf84"]
+radius = 26.0
+height = 56.0
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_ntg0u")
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
+collision_layer = 4
+script = ExtResource("1_t63xv")
+
+[node name="PlayerSprite" type="Sprite2D" parent="."]
+position = Vector2(135, 115)
+texture = ExtResource("1_2yrg5")
+
+[node name="PlayerCollision" type="CollisionShape2D" parent="."]
+position = Vector2(134, 117)
+shape = SubResource("CapsuleShape2D_dxf84")
