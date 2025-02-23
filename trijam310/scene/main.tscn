@@ -29,5 +29,6 @@ position = Vector2(177, 281)
 [node name="PV" parent="." instance=ExtResource("6_qpyw0")]
 
 [node name="Spawn_food_timer" type="Timer" parent="."]
-wait_time = 5.0
 autostart = true
+
+[connection signal="timeout" from="Spawn_food_timer" to="." method="_on_spawn_food_timer_timeout"]
