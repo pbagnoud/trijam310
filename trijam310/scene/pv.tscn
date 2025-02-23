@@ -38,4 +38,8 @@ offset_right = 1068.0
 offset_bottom = 116.0
 color = Color(0, 0, 0, 1)
 
+[node name="Score" type="Node2D" parent="."]
+
+[node name="ScoreTimer" type="Timer" parent="Score"]
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
