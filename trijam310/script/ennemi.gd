@@ -12,11 +12,9 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	position += random_direction * delta * speed
-	print(position)
 
 
 func _on_body_entered(body: Node2D) -> void:
-	print("OUILLE")
 	if body.is_in_group('Player'):
 		hit.emit()
 	queue_free()

@@ -31,7 +31,6 @@ func _physics_process(delta: float) -> void:
 		game_over.visible = 1
 		in_game_over = 1
 		timer.start()
-
 	
 
 func _regen():
