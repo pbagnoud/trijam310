@@ -14,7 +14,7 @@ script = ExtResource("1_5k55b")
 [node name="GameOver" type="Label" parent="."]
 visible = false
 z_index = 10
-texture_filter = 1
+texture_filter = 2
 layout_mode = 0
 offset_left = 82.0
 offset_top = -297.0
@@ -37,5 +37,9 @@ offset_top = -537.0
 offset_right = 1068.0
 offset_bottom = 116.0
 color = Color(0, 0, 0, 1)
+
+[node name="Score" type="Node2D" parent="."]
+
+[node name="ScoreTimer" type="Timer" parent="Score"]
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
