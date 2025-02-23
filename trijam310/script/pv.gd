@@ -1,6 +1,9 @@
 extends ProgressBar
 
-const DYING_SPEED = 8
+@onready var game_over: Label = $GameOver
+@onready var timer: Timer = $Timer
+
+const DYING_SPEED = 30
 var REGEN = self.max_value/2
 var current_score:float
 
@@ -13,8 +16,16 @@ func _physics_process(delta: float) -> void:
 	current_score = self.value
 	self.value= current_score - DYING_SPEED*delta
 	
+	#Game Over
+	if self.value < 0.01:
+		game_over.visible = 1
+		timer.start()
+
 func _regen():
-	self.value = self.value+REGEN
+	self.value = min(self.value+REGEN,self.max_value)
 	
+func _on_timer_timeout():
+	print("ok")
+	get_tree().reload_current_scene()
 	
 	
