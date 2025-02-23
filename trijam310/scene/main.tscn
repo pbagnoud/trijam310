@@ -16,11 +16,9 @@ script = ExtResource("1_rybf0")
 position = Vector2(354, 108)
 
 [node name="Ennemi" parent="." instance=ExtResource("4_nysn2")]
-modulate = Color(100, 1, 1, 1)
 position = Vector2(668, 126)
 
 [node name="Food" parent="." instance=ExtResource("5_uxa5d")]
-modulate = Color(1, 93.513, 1, 1)
 position = Vector2(177, 281)
 
 [node name="PV" parent="." instance=ExtResource("6_qpyw0")]
