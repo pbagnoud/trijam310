@@ -17,7 +17,7 @@ config/icon="res://asset/icon.svg"
 
 [autoload]
 
-Audio="*res://scene/Audio.tscn"
+Audio="res://scene/Audio.tscn"
 
 [importer_defaults]
 
