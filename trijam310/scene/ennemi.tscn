@@ -1,8 +1,16 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxqdkl5h67ti0"]
+[gd_scene load_steps=3 format=3 uid="uid://dv1k4ufrimfnu"]
 
-[ext_resource type="Texture2D" uid="uid://by50rr17l74kq" path="res://asset/icon.svg" id="1_5syrn"]
+[ext_resource type="Texture2D" uid="uid://clak24u6nr3hi" path="res://asset/Ail.png" id="1_nebjo"]
+[ext_resource type="Script" path="res://script/ennemi.gd" id="1_scsg5"]
 
-[node name="Ennemi" type="CharacterBody2D"]
+[node name="Ennemi" type="Area2D"]
+collision_layer = 3
+script = ExtResource("1_scsg5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_5syrn")
+texture = ExtResource("1_nebjo")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-4, -27, -1, -16, 9, -12, 24, -4, 27, 13, 24, 28, -11, 31, -24, 24, -26, 2, -16, -11, -10, -19, -6, -31, -4, -28)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
