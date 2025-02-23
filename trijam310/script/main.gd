@@ -40,4 +40,3 @@ func _on_spawn_garlic_timer_timeout() -> void:
 	elif spawn_garlic_timer.wait_time > .1:
 		spawn_garlic_timer.wait_time *=.999
 	spawn_garlic_timer.start()
-
