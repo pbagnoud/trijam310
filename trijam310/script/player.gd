@@ -8,8 +8,7 @@ var screen_size # Size of the game window.
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
-
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
@@ -32,14 +31,13 @@ func _physics_process(delta: float) -> void:
 	#
 	#position = position.clamp(Vector2.ZERO, screen_size)
 
-func on_hit():
-	# lancer timer
-	# changer la vitesse
-	# changer couleur
-	pass
+func _on_hit():
+	$Malade.start()
+	speed = 200
+	$PlayerSprite.frame = 1
+	
 	
 
 func _on_malade_timeout() -> void:
-	# reset la vitesse
-	# reset la couleur
-	pass # Replace with function body.
+	speed = 400
+	$PlayerSprite.frame = 0
