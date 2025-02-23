@@ -12,3 +12,5 @@ func _physics_process(delta: float) -> void:
 	current_score = self.value
 	self.value= current_score - DYING_SPEED*delta
 	
+	
+	
