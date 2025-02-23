@@ -1,6 +1,7 @@
 extends ProgressBar
 
 const DYING_SPEED = 8
+var REGEN = self.max_value/2
 var current_score:float
 
 # Called when the node enters the scene tree for the first time.
@@ -11,6 +12,9 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	current_score = self.value
 	self.value= current_score - DYING_SPEED*delta
+	
+func _regen():
+	self.value = self.value+REGEN
 	
 	
 	
